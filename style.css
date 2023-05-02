@@ -1,0 +1,151 @@
+*::after,*::before,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1200px;
+    font-family: 'Times New Roman', Times, serif;
+    margin:0 auto;
+    background-color: #BFCCB5;
+
+}
+.contenedor-icon-principal{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    
+
+    /* background-color: red; */
+    stroke: #000; 
+}
+
+
+
+img{
+    max-width: 100%;
+}
+/* header */
+
+header{
+    display: flex;
+    justify-content:space-between ;
+    padding: 30px 0px 30px 0px;
+
+}
+.img-principal-carrito{
+    position: relative;
+}
+
+/* .contar-productos{
+    position: absolute;
+    top:55%;
+    right: 0;
+    background-color: #000;
+    color:white #fff;
+    display: flex;
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+} */
+.probando{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 1px;
+    border-radius: 20px;
+
+    background-color: #B7B7B7;
+
+    width: 400px;
+    z-index: 1;
+    /* background-color: red; */
+}
+
+.info-cart-prducts{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    flex: 1.2;
+    border-bottom: 2px solid rgb(203, 210, 203);
+
+}
+.info-cart-prducts{
+    display: flex;
+    justify-content: space-between;
+}
+.titulo-producto-carrito{
+    font-size: 20px;
+    font-weight: 400;
+}
+.total-pagar{
+    font-size: 20px;
+    font-weight: 700;
+}
+.hidden-cart{
+    display: none;
+}
+
+
+/* AUN FALTA */
+
+.padre{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.item{
+    border-radius: 10px;
+    
+}
+.item:hover{
+    box-shadow:0 10px 200px rgba(55, 18, 18, 0.8) ;
+}
+
+.item img{
+    width: 100%;
+    height: 500px;
+    /* arregla la imagen para que no se vea aplstada */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
+}
+.item figure{
+    overflow: hidden;
+}
+.item:hover img{
+    transform: scale(1.1);
+
+}
+
+
+
+.info-producto{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.price{
+    font-size:18px; 
+    font-weight: 900;
+}
+.info-producto button{
+    border: none;
+    background-color: none;
+    background-color:#7C96AB ;
+    color: #fff;
+    padding: 15px 10px;
+    cursor:pointer;
+
+}
+
+
