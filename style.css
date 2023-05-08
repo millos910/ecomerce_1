@@ -3,12 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --principal-color:#BFCCB5;
+    --color-carrito:#B7B7B7;
+    --opacidad-contorno:rgb(203, 210, 203);
+    --selector-opacidad-img:rgba(55, 18, 18, 0.8);
+    --color-boton:#B7B7B7;
+    --letras-boton:#ffffff;
+    --text-color-white:#ffffffe3;
+    --dark-button:#070A52;
+
+}
+
 
 body{
     max-width: 1200px;
     font-family: 'Times New Roman', Times, serif;
     margin:0 auto;
-    background-color: #BFCCB5;
+    background-color:var(--principal-color);
 
 }
 .contenedor-icon-principal{
@@ -17,12 +29,76 @@ body{
     width: 40px;
     height: 40px;
     cursor: pointer;
-    
-
-    /* background-color: red; */
     stroke: #000; 
 }
+html{
+    scroll-behavior: smooth;
+}
+/* .darkmode{
 
+    background-color:#000;
+    width: 5.1rem;
+    height: 1.8rem;
+    border-radius: 1.2rem;
+    outline:none ;
+    border: none;
+    cursor:pointer;
+    position: relative;
+    justify-content: space-between;
+    
+
+} */
+
+button.switch{
+    position:absolute;
+    width: 5rem;
+    display: flex;
+    flex-direction: row;
+    outline:none ;
+    border: none;
+    cursor:pointer;
+    border-radius: 3rem;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+button.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 200px;
+    transition: 1s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0,2);
+}
+button.switch:active{
+    background-color: orange;
+    color: #000;
+}
+button.switch:active:active::after{
+    right: 0;
+    left: unset;
+}
+
+
+
+
+
+.switch span{
+    /* background-color:#fff; */
+    background-color: var(--principal-color);
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: none;
+
+    
+
+}
 
 
 img{
@@ -40,6 +116,67 @@ header{
     position: relative;
 }
 
+.hoddie-descuento img{
+    border-radius: 12px;
+}
+.text-off{
+    padding: 2rem;
+    font-family: 'Bruno Ace SC', cursive;
+    color: var(--text-color-white);
+    
+}
+.text-off h2{
+    /* background-color: red; */
+    display: flex;
+    width: 38rem;
+    height: 8rem;
+}
+.text-off span{
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-size:xx-large;
+}
+
+.hoddie-descuento{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+/* .boton-deslizar{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-left: 8rem;
+}
+button.ver-mas{
+    max-height: auto;   
+    min-height: auto;
+    max-width: auto;
+    min-width: 320px;
+    display: flex;
+    border-radius: 1rem;
+} */
+ul{
+    list-style: none;
+    padding-top: 2rem;
+}
+a{
+    text-decoration: none;
+    /* color: var(--texturaletras-color); */
+}
+li{
+    display: inline-block;
+}
+.ver-mas{
+    height: 2rem;
+    justify-content: center;
+    width: 25rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display:flex;
+}
 /* .contar-productos{
     position: absolute;
     top:55%;
@@ -62,7 +199,7 @@ header{
     gap: 1px;
     border-radius: 20px;
 
-    background-color: #B7B7B7;
+    background-color: var(--color-carrito);
 
     width: 400px;
     z-index: 1;
@@ -74,7 +211,7 @@ header{
     padding: 30px;
     justify-content: space-between;
     flex: 1.2;
-    border-bottom: 2px solid rgb(203, 210, 203);
+    border-bottom: 2px solid var(--opacidad-contorno);
 
 }
 .info-cart-prducts{
@@ -106,7 +243,7 @@ header{
     
 }
 .item:hover{
-    box-shadow:0 10px 200px rgba(55, 18, 18, 0.8) ;
+    box-shadow:0 10px 200px var(--selector-opacidad-img) ;
 }
 
 .item img{
@@ -141,8 +278,8 @@ header{
 .info-producto button{
     border: none;
     background-color: none;
-    background-color:#7C96AB ;
-    color: #fff;
+    background-color:var(--color-boton) ;
+    color: var(--letras-boton);
     padding: 15px 10px;
     cursor:pointer;
 
